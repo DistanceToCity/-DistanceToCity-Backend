@@ -32,11 +32,11 @@ class File:
             if(check.is_have_duplicate()):
                 file = open(self.path, "a")
                 file.write(title_point + "," + ",".join(modified_geo_points))
-                return "Success"
+                return " Success"
             else: 
-                return f"File have point {title_point}"
+                return f" File have point {title_point}"
        except NameError:
-            return f"not allow write in file {NameError}"
+            return f"  not allow write in file {NameError}"
 
 
 class FileAdditions(File):

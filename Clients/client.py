@@ -5,12 +5,6 @@ from Clients.ui import Styling, FontColor, FontStyle, Localizations
 import json
 
 
-
-
-
-
-
-
 class Console(Interface):
     def greeting(self):
         print("\n "+ Styling.style_string(Localizations.GREETING, FontColor.OKBLUE, FontStyle.BOLD ))
@@ -24,10 +18,9 @@ class Console(Interface):
        geo = [float(input_data[1]), float(input_data[2])]
        print(Styling.style_string(Localizations.RETURN_DISTANCE(input_data[0], self.get_distance(geo, self.get_geo_by_title(input_data[0]))),FontColor.HEADER, FontStyle.ITALIC))
     def set_place(self):
-       input_data = input(Styling.style_string(Localizations.SELECT_INPUT_TEXT,FontColor.OKBLUE, FontStyle.BOLD)).split(",")
+       input_data = input(Styling.style_string(Localizations.SELECT_INPUT_TEXT_ADDED_POINT,FontColor.OKBLUE, FontStyle.BOLD)).split(",")
        geo = [str(input_data[1]).strip() , str(input_data[2]).strip()]
-       print(input_data[0], geo)
-       print(self.set_geo(input_data[0], geo))
+       print(Styling.style_string(self.set_geo(input_data[0], geo),FontColor.HEADER, FontStyle.BOLD))
     def list_places(self):
        print(Styling.style_string(Localizations.LIST_PLACES,FontColor.OKBLUE, FontStyle.BOLD))
        for place in json.loads(self.get_list_geo()):
@@ -35,7 +28,7 @@ class Console(Interface):
            geo = f" широта {place[1][0]} довгота {str(place[1][1]).strip()}"
            print("   " + Styling.style_string(f'{links} - {geo}',FontColor.HEADER, FontStyle.BOLD), )
     def delete_place(self):
-       title = input(Styling.style_string(Localizations.SELECT_INPUT_TEXT,FontColor.OKBLUE, FontStyle.BOLD))
+       title = input(Styling.style_string(Localizations.SELECT_INPUT_TEXT_DELETE_POINT,FontColor.OKBLUE, FontStyle.BOLD))
        print(self.delete_geo_by_title(title))
         
     
