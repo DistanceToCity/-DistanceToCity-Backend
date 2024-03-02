@@ -11,6 +11,7 @@
     <img src="https://avatars.githubusercontent.com/u/161877952?s=200&v=4" alt="Logo" width="80" height="80">
   </a>
 
+
   <h3 align="center">DistanceToCity</h3>
 
   <p align="center">
@@ -30,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![20240302-1745-07 1361543-ezgif com-video-to-gif-converter](https://github.com/DistanceToCity/-DistanceToCity-Backend/assets/60855065/23191af5-89d9-4467-b9bd-8f83df895490)
 
 ### Вступ:
 
